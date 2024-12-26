@@ -1,0 +1,205 @@
+body {
+    background-color: #262524;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #403E3F;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: 700;
+    color: #CFF4D1;
+    text-align: center;
+    margin-bottom: 20px; /* Відступ під заголовком */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Без проміжку між кнопкою і полем */
+    width: 100%;
+    margin-top: 20px; /* Відступ зверху */
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    gap: 0; /* Прибираємо проміжок між елементами */
+}
+
+h1, h2 {
+    color: #C3EDF7;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+
+    margin-top: -50px;
+    padding-bottom: 30px;
+
+}
+
+p {
+    color: #CCDCE6;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline; /* Додаємо, щоб елементи <p> відображались на одній лінії */
+}
+
+.input-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    gap: 0; /* Прибираємо проміжок між елементами */
+}
+
+input[type="text"] {
+    display: flex;
+
+    height: 45px;
+    width: 600px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px 0 0 25px; /* Округлі кути тільки зліва */
+    background-color: #d6d8f6;
+    color: #241d1d;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]::placeholder {
+    color: #241d1d;
+}
+
+button {
+    height: 65px; /* Висота кнопки */
+    width: 120px; /* Ширина кнопки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    border-radius: 0 25px 25px 0; /* Пряма ліва сторона, округла права */
+    background-color: #8077BD;
+    color: #0c0303;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#search-button svg {
+    width: 30px;
+    height: 30px;
+}
+button:disabled {
+    background-color: #9489d9;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #359D9E;
+}
+
+
+.loader {
+     display: none;
+    font-size: 18px;
+    color: #888;
+
+    position: absolute;
+    bottom: 15vh; /* Ближче до поля пошуку */
+    display: none; /* Приховано за замовчуванням */
+    border: 6px solid #CFF4D1;
+    border-top: 6px solid #359D9E; /* Контрастний колір */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1300px) {
+    .container {
+        width: 80vw;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 1000px) {
+
+
+    input[type="text"] {
+        display: flex;
+
+        height: 45px;
+        width: 60%;
+    }
+
+    button {
+        height: 65px;
+        width: 20%;
+    }
+
+    #search-button svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    h1, h2 {
+       font-size: 33px;
+    }
+}
+
+@media (max-width: 660px) {
+    .container {
+        width: 100%;
+        height: 85vh;
+        max-height: 85vh;
+        padding: 0;
+        border-radius: 5px;
+    }
+
+    h1, h2 {
+        font-size: 25px;
+     }
+ }
+
+ @media (max-width: 470px) {
+    h1, h2 {
+        font-size: 20px;
+     }
+}
